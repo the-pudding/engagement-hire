@@ -13,13 +13,13 @@
 
 <body>
 
-	{{> base/header }}
+	{{> base/header 'sticky'}}
 
 	<main id='content'>
 
 		<div class='intro'>
 			
-			<h1 class='intro__hed'>{{doc.title}}</h1>
+			<h1 class='intro__hed'>{{{doc.title}}}</h1>
 			<time class='intro__time'>April 2021</time>
 			<div class="text-section">
 				{{#each doc.introSection}}

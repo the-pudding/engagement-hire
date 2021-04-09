@@ -55,8 +55,6 @@ header.is-sticky
 		background-color transparent
 		svg
 			stroke $off-black
-		&:focus 
-				outline 2px solid
 		
 		span
 			&:first-of-type
@@ -153,6 +151,8 @@ header.is-sticky.is-dark
 			fill $off-white
 
 	.header__menu
+		position absolute
+		right 1rem
 		background-color $white
 		color $off-black
 		+mq('bp-3')

@@ -3,6 +3,7 @@
 	margin-bottom 4rem
 	font-weight 500
 	font-family 'National 2 Narrow Web'
+	color $gray-dark
 
 .text-section, .section__hed
 	margin 0 auto
@@ -16,12 +17,58 @@
 		margin-left 1em
 		list-style-type square
 
+.text-section
+	padding-bottom 0rem
+	+mq('bp-4')
+		padding-bottom 2rem
+
+.text-section:first-of-type
+	p
+		set-type-size('root', true)
+		line-height 1.65
+		+mq('bp-4')
+			font-size 22px
+			line-height 1.65
+
 .section__hed
 	margin-top 4rem
 	font-size 36px
 	font-family 'Tiempos Headline Web'
+	border-top 1px solid $gray-light
+	padding-top 1rem
 
 .intro__hed
-	margin-top 4rem
-	font-size 48px
 	font-family 'Tiempos Headline Web'
+	set-type-size('xxxx-large', true)
+	+mq('bp-4')
+		set-type-size('xxxxx-large', true)
+
+a:hover
+	color $gray-dark
+	border-bottom 1px solid $gray
+
+.header__container a
+	position absolute
+
+.header__container .logo
+	top 5px
+	left 1rem
+	transform translate(0, 0)
+	+mq('bp-4')
+		left 50%
+		transform translate(-50%, 0)
+
+
+.header__container .apply
+	right 1rem
+	border-bottom none
+
+	button
+		background-color #A239CA
+		padding 0.25rem 0.5rem
+		border-radius 0.125rem
+		color $white
+		set-type-size('small', true)
+
+		&:hover
+			background-color $gray
