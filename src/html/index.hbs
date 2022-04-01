@@ -41,9 +41,9 @@
 				{{/each}}
 			</div>
 
-			<h3 class='section__hed'>{{doc.doingHed}}</h3>
+			<h3 class='section__hed'>{{doc.responsibilitiesHed}}</h3>
 			<div class="text-section">
-				{{#each doc.doingSection}}
+				{{#each doc.responsibilitiesSection}}
 					{{#ifEquals type 'ul'}}
 					{{#each value}}
 						<li>{{{this}}}</li>
@@ -55,10 +55,9 @@
 				{{/each}}
 			</div>
 
-			<h3 class='section__hed'>{{doc.aboutHed}}</h3>
+			<h3 class='section__hed'>{{doc.skillsHed}}</h3>
 			<div class="text-section">
-		
-				{{#each doc.aboutSection}}
+				{{#each doc.skillsSection}}
 					{{#ifEquals type 'ul'}}
 					{{#each value}}
 						<li>{{{this}}}</li>
@@ -89,6 +88,20 @@
 			<div class="text-section">
 		
 				{{#each doc.compSection}}
+					{{#ifEquals type 'ul'}}
+					{{#each value}}
+						<li>{{{this}}}</li>
+					{{/each}}
+					{{/ifEquals}}
+					{{#ifEquals type 'text'}}
+						<p>{{{value}}}</p>
+					{{/ifEquals}}
+				{{/each}}
+			</div>
+
+			<h3 class='section__hed'>{{doc.applyHed}}</h3>
+			<div class="text-section">
+				{{#each doc.applySection}}
 					{{#ifEquals type 'ul'}}
 					{{#each value}}
 						<li>{{{this}}}</li>
