@@ -17,13 +17,13 @@ client:
 	npm run depudding
 	
 aws-assets:
-	aws s3 sync dist s3://pudding.cool/career/managing-director --delete --cache-control 'max-age=31536000' --exclude 'index.html' --exclude 'bundle.js'
+	aws s3 sync dist s3://pudding.cool/career/audience-engagement-manager --delete --cache-control 'max-age=31536000' --exclude 'index.html' --exclude 'bundle.js'
 
 aws-htmljs:
-	aws s3 cp dist/index.html s3://pudding.cool/career/managing-director/index.html
-	aws s3 cp dist/bundle.js s3://pudding.cool/career/managing-director/bundle.js
+	aws s3 cp dist/index.html s3://pudding.cool/career/audience-engagement-manager/index.html
+	aws s3 cp dist/bundle.js s3://pudding.cool/career/audience-engagement-manager/bundle.js
 
 aws-cache:
-	aws cloudfront create-invalidation --distribution-id E13X38CRR4E04D --paths '/career/managing-director*'	
+	aws cloudfront create-invalidation --distribution-id E13X38CRR4E04D --paths '/career/audience-engagement-manager*'	
 
 pudding: aws-assets aws-htmljs aws-cache archive
